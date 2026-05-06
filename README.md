@@ -12,7 +12,7 @@ The pipeline simulates a real-world modern data platform, including orchestratio
 
 ## 🏗️ Architecture
 
-![medallion-architecture-databricks-airflow](docs/architecture.png)
+![medallion-architecture-databricks-airflow](docs/diagram_architecture.png)
 
 End-to-end crypto data pipeline using Medallion Architecture (Bronze → Silver → Gold) on Databricks with Airflow orchestration.*
 
