@@ -12,6 +12,10 @@ The pipeline simulates a real-world modern data platform, including orchestratio
 
 ## 🏗️ Architecture
 
+![medallion-architecture-databricks-airflow](docs/architecture.png)
+
+End-to-end crypto data pipeline using Medallion Architecture (Bronze → Silver → Gold) on Databricks with Airflow orchestration.*
+
 The pipeline follows the Medallion Architecture:
 
 * 🟫 **Bronze Layer**
@@ -64,16 +68,19 @@ medallion-architecture-databricks-airflow/
 ├── docker-compose.yaml
 │
 ├── dags/
-│   └── pipeline.py                # Airflow DAG for API ingestion
+│   └── pipeline.py              # Airflow DAG for API ingestion
 │
 ├── notebooks/
 │   ├── bronze_ingestion.ipynb   # Load raw JSON → Bronze tables
 │   ├── silver_ingestion.ipynb   # cleansing and denormalization
-│   └── gold_ingestion.ipynb   # Final aggregation 
+│   └── gold_ingestion.ipynb     # Final aggregation 
 │   
+├── data/
+│   └── raw/                     # Local staging (Airflow output)
 │
-└── data/
-    └── raw/                     # Local staging (Airflow output)
+└── docs/
+    └── diagram_architecture
+
 ```
 
 
